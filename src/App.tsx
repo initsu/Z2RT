@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ALL_CHECKOFFS } from './Data';
 import { OverworldCard } from './OverworldCard';
 import { PalaceCard } from './PalaceCard';
+import { PopoutButton } from './PopoutButton';
 
 function App() {
   const [stateArray, setStateArray] = useState<boolean[]>(
@@ -18,6 +19,7 @@ function App() {
     <>
       <PalaceCard stateArray={stateArray} onClick={(index) => toggleState(index)} />
       <OverworldCard stateArray={stateArray} onClick={(index) => toggleState(index)} />
+      <PopoutButton />
     </>
   )
 }
