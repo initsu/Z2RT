@@ -3,5 +3,86 @@
   src: url('../fonts/adventuresome.ttf') format('truetype');
 }
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 :root {
+  font-family: Adventuresome;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #052366;
+}
+
+img {
+  cursor: pointer;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+}
+.nn {
+  image-rendering: pixelated;
+}
+
+.state-true>img {
+  filter: grayscale(100%) !important;
+}
+
+.state-true::after {
+  content: '';
+  position: absolute;
+  right: 0em;
+  bottom: 0.5em;
+  width: 3em;
+  height: 3em;
+  background-image: url('assets/checkmark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.palaces {
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
+.palaces img {
+  display: inline-block;
+  height: 4.8em;
+}
+.pillar {
+  height: 4em;
+  cursor: default;
+}
+
+.overworld {
+  position: relative;
+  top: 8px;
+  left: 0px;
+}
+.overworld-row {
+  margin: 8px 0;
+  width: 576px;
+  display: flex;
+}
+.location {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  margin: 0 4px;
+}
+.location:first-child {
+  margin-left: 0;
+}
+.location:last-child {
+  margin-right: 0;
+}
+.location>img {
+  width: 100%;
+  display: block;
+}
+.overworld .location>img {
+  aspect-ratio: 16 / 13;
 }
