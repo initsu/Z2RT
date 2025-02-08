@@ -1,2 +1,7 @@
+@font-face{
+  font-family: Adventuresome;
+  src: url('../fonts/adventuresome.ttf') format('truetype');
+}
+
 :root {
 }
