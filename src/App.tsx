@@ -30,11 +30,23 @@ function App() {
     );
   };
 
+  const resetState = () => {
+    const isConfirmed = window.confirm("Are you sure you want to reset?");
+    if (isConfirmed) {
+      setStateArray(Array(ALL_CHECKOFFS.length).fill(false));
+    }
+  };
+
   return (
     <>
       <PalaceCard stateArray={stateArray} onClick={(index) => toggleState(index)} />
       <OverworldCard stateArray={stateArray} onClick={(index) => toggleState(index)} />
-      <PopoutButton />
+      <div className="buttons">
+        <PopoutButton />
+        <div className="reset-button">
+          <button onClick={() => resetState()}>Reset</button>
+        </div>
+      </div>
     </>
   )
 }
