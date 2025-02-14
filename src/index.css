@@ -48,8 +48,9 @@ img {
   position: relative;
   top: 8px;
   left: 8px;
+  margin-bottom: 4px;
 }
-.palaces img {
+.palaces .checkoff-img {
   display: inline-block;
   height: 4.8em;
 }
@@ -60,32 +61,93 @@ img {
 
 .overworld {
   position: relative;
-  top: 8px;
-  left: 0px;
+  margin-top: 8px;
 }
-.overworld-row {
-  margin: 8px 0;
-  width: 576px;
+.overworld-wrap {
+  margin: 0 0px;
+  width: 580px;
   display: flex;
+  flex-wrap: wrap;
 }
-.location {
-  flex: 1;
+.checkoff {
   position: relative;
   display: inline-block;
+}
+.palaces .checkoff {
   margin: 0 4px;
+  flex: 1;
 }
-.location:first-child {
-  margin-left: 0;
+.overworld .checkoff-img {
+  margin: 4px 4px;
+  width: 88px;
+  aspect-ratio: 16 / 13;
 }
-.location:last-child {
-  margin-right: 0;
-}
-.location>img {
+.checkoff-img {
   width: 100%;
   display: block;
 }
-.overworld .location>img {
-  aspect-ratio: 16 / 13;
+.overlay-text {
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  height: 24px;
+  font-size: 8px;
+  filter: drop-shadow(0px 1px #4240ff) drop-shadow(1px 0px #4240ff);
+  pointer-events: none;
+}
+
+.overlay-img {
+  position: absolute;
+  right: 7px;
+  bottom: 4px;
+  height: 28px;
+  pointer-events: none;
+}
+
+.overworld-continent-title {
+  margin: 4px 4px;
+  width: 115px;
+  align-self: center;
+  font-size: 10px;
+  text-align: center;
+  color: #000;
+}
+
+.overworld-continent-group {
+  position: absolute;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overworld-continent-group.west {
+  top: 0px;
+  left: 0px;
+  width: 574px;
+  height: 136px;
+}
+
+.overworld-continent-group.east {
+  top: 136px;
+  left: 0px;
+  width: 574px;
+  height: 136px;
+  background-color: rgba(160, 160, 160, 0.7);
+}
+
+.overworld-continent-group.dm {
+  top: 272px;
+  left: 0px;
+  width: 287px;
+  height: 68px;
+  background-color: rgb(153 78 0);
+}
+
+.overworld-continent-group.mi {
+  top: 272px;
+  left: 287px;
+  width: 287px;
+  height: 68px;
+  background-color: rgb(188 190 0);
 }
 
 .buttons {
@@ -94,3 +156,4 @@ img {
   display: flex;
   gap: 16px;
 }
+

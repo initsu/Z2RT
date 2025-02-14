@@ -23,14 +23,20 @@ export const CheckOffImage: React.FC<CheckOffImageProps> = ({ obj, state, onClic
     }
     return (
         <div
-            className={`location state-${state}`}
+            className={`checkoff state-${state}`}
         >
             <img
-                className={`${obj.nn ? 'nn' : ''}`}
+                className={`checkoff-img ${obj.nn ? 'nn' : ''}`}
                 style={style}
                 src={src}
                 onClick={onClick}
             />
+            {obj.overlayText ? <>
+                <span className={`overlay-text`}>{obj.overlayText}</span>
+            </> : <></>}
+            {obj.overlayImg ? <>
+                <img className={`overlay-img`} src={obj.overlayImg} />
+            </> : <></>}
         </div>
     );
 };
