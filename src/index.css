@@ -14,7 +14,7 @@ body {
 }
 
 #root {
-  width: 576px;
+  width: 574px;
 }
 
 img {
@@ -50,12 +50,18 @@ img {
   left: 8px;
   margin-bottom: 4px;
 }
+
+.palaces .checkoff {
+  margin: 0 12px;
+  flex: 1;
+}
+
 .palaces .checkoff-img {
   display: inline-block;
-  height: 4.8em;
+  height: 4.1em;
 }
 .pillar {
-  height: 4em;
+  height: 3.8em;
   cursor: default;
 }
 
@@ -79,7 +85,7 @@ img {
 }
 .overworld .checkoff-img {
   margin: 4px 4px;
-  width: 88px;
+  width: 74px;
   aspect-ratio: 16 / 13;
 }
 .checkoff-img {

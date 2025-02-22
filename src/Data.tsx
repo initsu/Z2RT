@@ -9,31 +9,25 @@ export interface CheckOffType {
 }
 
 export const TOWN_WEST_ARRAY: ReadonlyArray<CheckOffType> = [
-    /*
     { img: "towns/rauro.png", overlayText: 'Rauro', overlayImg: "old_man.png", },
     { img: "towns/ruto.png", overlayText: 'Ruto', overlayImg: "old_man.png", },
     { img: "towns/saria.png", overlayText: 'Saria', overlayImg: "old_man.png", },
-    { img: "towns/saria_mirror.png" },
+    { img: "towns/saria_mirror.png", overlayText: 'Table of Saria' },
     { img: "towns/mido.png", overlayText: 'Mido', overlayImg: "old_man.png", },
-    { img: "towns/mido_down_thrust.png", overlayImg: "down_thrust_man.png" },
+    { img: "towns/mido_down_thrust.png", overlayText: 'Mido church', overlayImg: "down_thrust_man.png" },
     { img: "towns/bagu.png", overlayText: 'Bagu\'s House', overlayImg: "bagu.png" },
-    */
 ];
 export const TOWN_WEST_ARRAY_START = 0;
 
 export const TOWN_EAST_ARRAY: ReadonlyArray<CheckOffType> = [
-    /*
     { img: "towns/nabooru.png", overlayText: 'Nabooru', overlayImg: "old_man.png", },
-    { img: "towns/nabooru_water.png" },
+    { img: "towns/nabooru_water.png", overlayText: 'Nabooru fountain' },
     { img: "towns/darunia.png", overlayText: 'Darunia', overlayImg: "old_man.png", },
-    { img: "towns/darunia_up_thrust.png", overlayImg: "up_thrust_man.png" },
+    { img: "towns/darunia_up_thrust.png", overlayText: 'Darunia Chimney', overlayImg: "up_thrust_man.png" },
     { img: "towns/new_kasuto.png", overlayText: 'New Kasuto', overlayImg: "old_man.png", },
-    */
-    { img: "towns/new_kasuto_lady.png" },
-    { img: "towns/new_kasuto_spell_tower.png" },
-    /*
+    { img: "towns/new_kasuto_lady.png", overlayText: 'Kasuto Lady' },
+    { img: "towns/new_kasuto_spell_tower.png", overlayText: 'Spell Tower' },
     { img: "towns/old_kasuto.png", overlayText: 'Old Kasuto', overlayImg: "old_man.png", },
-    */
 ];
 export const TOWN_EAST_ARRAY_START = TOWN_WEST_ARRAY_START + TOWN_WEST_ARRAY.length;
 
@@ -72,20 +66,20 @@ export const EAST_ARRAY: ReadonlyArray<CheckOffType> = [
     { img: "locations_east/cave_07_east_2nd_pbag.png" },
     { img: "locations_east/desert.png", nn: true },
     { img: "locations_east/water.png", nn: true },
+    { img: "locations_east/forest.png", nn: true, overlayImg: "hammer.png", },
+    { img: "locations_east/three_eye_rock.png" },
 ];
 export const EAST_ARRAY_START = WEST_ARRAY_START + WEST_ARRAY.length;
 
 export const DM_ARRAY: ReadonlyArray<CheckOffType> = [
-    { img: "locations_dm/rock.png", nn: true },
     { img: "locations_dm/cave_hammer.png" },
+    { img: "locations_dm/rock.png", nn: true },
 ];
 export const DM_ARRAY_START = EAST_ARRAY_START + EAST_ARRAY.length;
 
 export const MI_ARRAY: ReadonlyArray<CheckOffType> = [
     { img: "locations_mi/maze_island_drop_child.png" },
     { img: "locations_mi/maze_island_drop_magic_container.png" },
-    { img: "locations_east/forest.png", nn: true },
-    { img: "locations_east/three_eye_rock.png" },
 ];
 export const MI_ARRAY_START = DM_ARRAY_START + DM_ARRAY.length;
 
