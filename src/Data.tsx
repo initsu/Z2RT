@@ -38,6 +38,7 @@ export const BOSS_ARRAY: ReadonlyArray<CheckOffType> = [
     { img: "bosses/karock.png" },
     { img: "bosses/gooma.png" },
     { img: "bosses/barba.png" },
+    { img: "bosses/thunderbird.png" },
 ];
 export const BOSS_ARRAY_START = TOWN_EAST_ARRAY_START + TOWN_EAST_ARRAY.length;
 

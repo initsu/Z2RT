@@ -3,6 +3,12 @@
   src: url('../fonts/adventuresome.ttf') format('truetype');
 }
 
+:root {
+  --max-width: 800px;
+  --checkoff-width: 14.1%;
+  --checkoff-margins: 8px;
+}
+
 body {
   margin: 0;
   overflow: hidden;
@@ -14,7 +20,7 @@ body {
 }
 
 #root {
-  width: 574px;
+  max-width: min(var(--max-width), 120vh - 120px);
 }
 
 img {
@@ -23,6 +29,7 @@ img {
   -webkit-user-drag: none;
   -moz-user-select: none;
 }
+
 .nn {
   image-rendering: pixelated;
 }
@@ -34,11 +41,11 @@ img {
 .state-true::after {
   content: '';
   position: absolute;
-  right: 0em;
-  bottom: 0.5em;
-  width: 3em;
-  height: 3em;
-  background-image: url('assets/checkmark.png');
+  right: 4%;
+  bottom: 4%;
+  width: 40%;
+  height: 40%;
+  background-image: url('assets/checkmark.svg');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -46,60 +53,64 @@ img {
 
 .palaces {
   position: relative;
-  top: 8px;
-  left: 8px;
-  margin-bottom: 4px;
-}
-
-.palaces .checkoff {
-  margin: 0 12px;
-  flex: 1;
-}
-
-.palaces .checkoff-img {
-  display: inline-block;
-  height: 4.1em;
-}
-.pillar {
-  height: 3.8em;
-  cursor: default;
+  margin-bottom: calc(var(--checkoff-margins) / 2);
 }
 
 .overworld {
   position: relative;
-  margin-top: 8px;
+  margin-top: var(--checkoff-margins);
 }
-.overworld-wrap {
+
+.checkoff-items-wrap {
+  position: relative;
   margin: 0 0px;
-  width: 580px;
+  width: calc(100% + var(--checkoff-margins));
   display: flex;
   flex-wrap: wrap;
 }
+
+.checkoff-item-group {
+  margin: calc(var(--checkoff-margins) / 2);
+  width: calc(var(--checkoff-width) - var(--checkoff-margins));
+}
+
+.checkoff-item {
+  margin: calc(var(--checkoff-margins) / 2);
+  width: calc(var(--checkoff-width) - var(--checkoff-margins));
+}
+
 .checkoff {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
-.palaces .checkoff {
-  margin: 0 4px;
-  flex: 1;
+
+.palaces .checkoff-img {
+  width: 100%;
 }
+
 .overworld .checkoff-img {
-  margin: 4px 4px;
-  width: 74px;
+  width: 100%;
   aspect-ratio: 16 / 13;
 }
+
 .checkoff-img {
   width: 100%;
   display: block;
 }
+
 .overlay-text {
   position: absolute;
   left: 7px;
   top: 4px;
+  margin-right: 7px;
   height: 24px;
-  font-size: 8px;
+  font-size: 1.2vw;
   filter: drop-shadow(0px 1px #4240ff) drop-shadow(1px 0px #4240ff);
   pointer-events: none;
+  @media (min-width: 600px) {
+    font-size: 0.5em;
+  }
 }
 
 .overlay-img {
@@ -111,10 +122,13 @@ img {
 }
 
 .overworld-continent-title {
-  margin: 4px 4px;
-  width: 115px;
+  margin: calc(var(--checkoff-margins) / 2);
+  width: calc(1.5 * var(--checkoff-width) - var(--checkoff-margins));
   align-self: center;
-  font-size: 10px;
+  font-size: 2.1vw;
+  @media (min-width: 600px) {
+    font-size: 0.7em;
+  }
   text-align: center;
   color: #000;
 }
@@ -126,33 +140,33 @@ img {
 }
 
 .overworld-continent-group.west {
-  top: 0px;
-  left: 0px;
-  width: 574px;
-  height: 136px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .overworld-continent-group.east {
-  top: 136px;
-  left: 0px;
-  width: 574px;
-  height: 136px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(160, 160, 160, 0.7);
 }
 
 .overworld-continent-group.dm {
-  top: 272px;
-  left: 0px;
-  width: 287px;
-  height: 68px;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
   background-color: rgb(153 78 0);
 }
 
 .overworld-continent-group.mi {
-  top: 272px;
-  left: 287px;
-  width: 287px;
-  height: 68px;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
   background-color: rgb(188 190 0);
 }
 
@@ -162,4 +176,3 @@ img {
   display: flex;
   gap: 16px;
 }
-

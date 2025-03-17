@@ -1,5 +1,5 @@
 const POPUP_WIDTH = 574;
-const POPUP_HEIGHT = window.screen.height;
+const POPUP_HEIGHT = 574;
 const POPUP_X = window.screen.width - POPUP_WIDTH;
 const POPUP_Y = 0;
 

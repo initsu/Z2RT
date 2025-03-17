@@ -10,36 +10,48 @@ export interface OverworldCardProps {
 export const OverworldCard: React.FC<OverworldCardProps> = ({ stateArray, onClick }) => {
     return (
         <div className="overworld">
-            <div className="overworld-wrap">
+            <div className="checkoff-items-wrap">
                 {TOWN_WEST_ARRAY.map((obj, index) => (
-                    <CheckOffImage key={index} obj={obj} state={stateArray[TOWN_WEST_ARRAY_START + index]} onClick={() => onClick(TOWN_WEST_ARRAY_START + index)} />
+                    <div key={index} className="checkoff-item">
+                        <CheckOffImage obj={obj} state={stateArray[TOWN_WEST_ARRAY_START + index]} onClick={() => onClick(TOWN_WEST_ARRAY_START + index)} />
+                    </div>
                 ))}
                 {WEST_ARRAY.map((obj, index) => (
-                    <CheckOffImage key={index} obj={obj} state={stateArray[WEST_ARRAY_START + index]} onClick={() => onClick(WEST_ARRAY_START + index)} />
+                    <div key={index} className="checkoff-item">
+                        <CheckOffImage obj={obj} state={stateArray[WEST_ARRAY_START + index]} onClick={() => onClick(WEST_ARRAY_START + index)} />
+                    </div>
                 ))}
+                <div className="overworld-continent-group west" />
             </div>
-            <div className="overworld-wrap">
+            <div className="checkoff-items-wrap">
                 {TOWN_EAST_ARRAY.map((obj, index) => (
-                    <CheckOffImage key={index} obj={obj} state={stateArray[TOWN_EAST_ARRAY_START + index]} onClick={() => onClick(TOWN_EAST_ARRAY_START + index)} />
+                    <div key={index} className="checkoff-item">
+                        <CheckOffImage obj={obj} state={stateArray[TOWN_EAST_ARRAY_START + index]} onClick={() => onClick(TOWN_EAST_ARRAY_START + index)} />
+                    </div>
                 ))}
                 {EAST_ARRAY.map((obj, index) => (
-                    <CheckOffImage key={index} obj={obj} state={stateArray[EAST_ARRAY_START + index]} onClick={() => onClick(EAST_ARRAY_START + index)} />
+                    <div key={index} className="checkoff-item">
+                        <CheckOffImage obj={obj} state={stateArray[EAST_ARRAY_START + index]} onClick={() => onClick(EAST_ARRAY_START + index)} />
+                    </div>
                 ))}
+                <div className="overworld-continent-group east" />
             </div>
-            <div className="overworld-wrap">
+            <div className="checkoff-items-wrap">
                 {DM_ARRAY.map((obj, index) => (
-                    <CheckOffImage key={index} obj={obj} state={stateArray[DM_ARRAY_START + index]} onClick={() => onClick(DM_ARRAY_START + index)} />
+                    <div key={index} className="checkoff-item">
+                        <CheckOffImage obj={obj} state={stateArray[DM_ARRAY_START + index]} onClick={() => onClick(DM_ARRAY_START + index)} />
+                    </div>
                 ))}
                 <div className="overworld-continent-title">Death Mountain</div>
                 <div className="overworld-continent-title">Maze Island</div>
                 {MI_ARRAY.map((obj, index) => (
-                    <CheckOffImage key={index} obj={obj} state={stateArray[MI_ARRAY_START + index]} onClick={() => onClick(MI_ARRAY_START + index)} />
+                    <div key={index} className="checkoff-item">
+                        <CheckOffImage obj={obj} state={stateArray[MI_ARRAY_START + index]} onClick={() => onClick(MI_ARRAY_START + index)} />
+                    </div>
                 ))}
+                <div className="overworld-continent-group dm" />
+                <div className="overworld-continent-group mi" />
             </div>
-            <div className="overworld-continent-group west" />
-            <div className="overworld-continent-group east" />
-            <div className="overworld-continent-group dm" />
-            <div className="overworld-continent-group mi" />
         </div>
     );
 };
