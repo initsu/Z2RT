@@ -1,7 +1,9 @@
 
 # Zelda II Randomizer Tracker by initsu
 
-## Setup
+## Running
+
+Go [here](https://initsu.github.io/Z2RT/) to open the tracker.
 
 ## Building
 
